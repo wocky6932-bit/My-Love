@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Heart, Music2, VolumeX, Volume2, Sparkles, Mail, ChevronDown } from 'lucide-react'
+import { Heart, Sparkles, Mail, ChevronDown } from 'lucide-react'
 
 const memories = [
   { src: '/media/photo-01.jpg', note: 'mon amour', rotate: '-3deg' },
@@ -48,7 +48,6 @@ function Photo({ src, note, rotate }: { src: string; note: string; rotate: strin
 export default function Page() {
   const [opened, setOpened] = useState(false)
   const [kissed, setKissed] = useState(false)
-  const [music, setMusic] = useState(false)
   const [reduced, setReduced] = useState(false)
 
   useEffect(() => {
@@ -77,7 +76,6 @@ export default function Page() {
     </section>}
 
     <div className={opened ? 'site visible' : 'site'}>
-      <button className="music-toggle" onClick={() => setMusic(!music)} aria-label={music ? 'Désactiver la musique' : 'Activer la musique'}>{music ? <Volume2 size={16} /> : <VolumeX size={16} />}<span>{music ? 'son activé' : 'son désactivé'}</span></button>
       <section id="birthday" className="hero section-rule">
         <FloatingHearts />
         <div className="hero-kicker">pour celui qui fait chanter mon cœur</div>
