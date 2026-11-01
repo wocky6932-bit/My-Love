@@ -104,7 +104,13 @@ export default function Page() {
       <section className="anniversary section-rule"><FloatingHearts count={6} /><span className="eyebrow">et ce n&apos;est que le début</span><h2><span>3 ANS</span><i>&</i><span>4 MOIS</span></h2><p>Tant de souvenirs, tant d&apos;histoires,<br />et encore tellement de choses à vivre.</p></section>
 
       <section className="finale"><FloatingHearts count={16} /><Sparkles className="sparkle sparkle-one" /><Sparkles className="sparkle sparkle-two" /><span className="eyebrow">une dernière chose</span><h2>Et si je devais choisir encore,<br /><em>je te choisirais toujours.</em></h2><p className="final-love">Joyeux anniversaire, mon amour. <Heart size={19} fill="currentColor" /></p><button className="kiss-button" onClick={() => setKissed(true)}>Un dernier bisou ? <span>💋</span></button>{kissed && <div className="kiss-reveal" role="status"><div className="kiss-hearts">♥ ♥ ♥</div><strong>JE T&apos;AIME</strong><span>toujours, toujours, toujours</span></div>}</section>
-      <footer>fait avec amour, rien que pour toi <Heart size={12} fill="currentColor" /></footer>
+      <footer>
+        <span>fait avec amour, rien que pour toi <Heart size={12} fill="currentColor" /></span>
+        <span className="footer-sep">•</span>
+        <a href="https://www.wockytech.xyz/" target="_blank" rel="noopener noreferrer" className="footer-credit">
+          réalisé par <strong>WockyTech</strong>
+        </a>
+      </footer>
     </div>
   </main>
 }
